@@ -48,7 +48,9 @@ nav{
     font-size: 26pt;
 }
 
-.div-status{
+/* ESTILIZAÇÃO HORARIO DE FUNCIONAMENTO */
+
+.div-horarios{
     align-items: center;
     display: flex;
     justify-content: center;
@@ -56,52 +58,46 @@ nav{
 }
 
 
-.menu-status{
+.menu-horarios{
     display: none;
 }
 
-.menu-status > p{
+.menu-horarios > p{
     margin: 5px;
     font-size: 16pt;
     font-weight: lighter;
 }
 
-.menu-status > p:nth-child(1){
-    color: #31e84c;
-    position: relative;
-}
-
-.menu-status > p:nth-child(2){
-    color: yellow;
-    position: relative;
-}
-
-.menu-status > p:nth-child(3){
-    color: red;
-    position: relative;
-}
-
-.status{
+.horarios{
     text-align: center;
     width: 200px;
 }
 
-.status > p:nth-child(1){
+.horarios > p:nth-child(1){
     color: yellow;
     font-size: 16pt;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
+    margin-top: 7px;
 }
 
-.status:hover > .menu-status{
+.horarios:hover > .menu-horarios{
     align-items: center;
     background-color: #979797;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 150px;
+    height: 300px;
     margin: 0;
     opacity: 0.9;
     position: absolute;
     text-align: center;
     width: 200px;
+}
+
+.aberto{
+    color: #31e84c;
+}
+
+.fechado{
+    color: red;
 }

@@ -22,7 +22,6 @@
             <script>
                 var relogio = document.getElementById('clock');
                 var statusRelogio = document.getElementById('textostatus');
-                console.log(status);
                 function manipularRelogio(){
                     var hoje = new Date();
 
@@ -75,13 +74,17 @@
             </script>
 
         </div>
-        <div class="div-status">
-            <div class="status">
-                <p>Mudança de Status</p>
-                <div class="menu-status">
-                    <p>Aberto Agora</p>
-                    <p>Horário de Almoço</p>
-                    <p>Fechado Agora</p>
+        <div class="div-horarios">
+            <div class="horarios">
+                <p>Horário de Funcionamento</p>
+                <div class="menu-horarios">
+                    <p class="aberto">Segunda: 07h-18h</p>
+                    <p class="aberto">Terça: 07h-18h</p>
+                    <p class="aberto">Quarta: 07h-18h</p>
+                    <p class="aberto">Quinta: 07h-18h</p>
+                    <p class="fechado">Sexta: Fechado</p>
+                    <p class="fechado">Sábado: Fechado</p>
+                    <p class="fechado">Domingo: Fechado</p>
                 </div>
             </div>
         </div>
