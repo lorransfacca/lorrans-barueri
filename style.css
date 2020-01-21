@@ -1,13 +1,9 @@
+/* ESTILIZAÇÃO DO BODY */
 body{
     margin: 0;
 }
 
-h1{
-    margin: 0;
-    font-size: 72pt;
-    font-weight: lighter;
-}
-
+/* ESTILIZAÇÃO DO BANNER */
 header{
     align-items: center;
     background-image: url('imagens/logotipo.jfif');
@@ -20,6 +16,92 @@ header{
     text-align: center;
 }
 
+h1{
+    margin: 0;
+    font-size: 72pt;
+    font-weight: lighter;
+}
+
 .span-header{
     color: yellow;
+}
+
+/* ESTILIZAÇÃO DA PARTE DO RELOGIO */
+nav{
+    align-items: center;
+    background-color: #808080;
+    display: flex;
+    height: 10vh;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.relogio{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+}
+
+#clock{
+    color: #31e84c;
+    font-size: 26pt;
+}
+
+.div-status{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+
+.menu-status{
+    display: none;
+}
+
+.menu-status > p{
+    margin: 5px;
+    font-size: 16pt;
+    font-weight: lighter;
+}
+
+.menu-status > p:nth-child(1){
+    color: #31e84c;
+    position: relative;
+}
+
+.menu-status > p:nth-child(2){
+    color: yellow;
+    position: relative;
+}
+
+.menu-status > p:nth-child(3){
+    color: red;
+    position: relative;
+}
+
+.status{
+    text-align: center;
+    width: 200px;
+}
+
+.status > p:nth-child(1){
+    color: yellow;
+    font-size: 16pt;
+    margin-bottom: 20px;
+}
+
+.status:hover > .menu-status{
+    align-items: center;
+    background-color: #979797;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+    margin: 0;
+    opacity: 0.9;
+    position: absolute;
+    text-align: center;
+    width: 200px;
 }

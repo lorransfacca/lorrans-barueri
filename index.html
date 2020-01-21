@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Facca Projetista</title>
 </head>
+
 <body>
     <header>
         <h1><span class="span-header">F</span>acca <span class="span-header">P</span>rojetista</h1>
@@ -15,34 +17,75 @@
     <nav>
         <div class="relogio">
             <div id=clock>00:00:00</div>
+            <div id=textostatus></div>
 
             <script>
                 var relogio = document.getElementById('clock');
-                function mostrarHorario(){
+                var statusRelogio = document.getElementById('textostatus');
+                console.log(status);
+                function manipularRelogio(){
                     var hoje = new Date();
-                    var horas = hoje.getHours();
 
-                    if(horas < 10){
-                        horas = "0"+horas;
+                    var horas = hoje.getHours();
+                    if (horas < 10){
+                        horas = "0" + horas;
                     }
 
                     var minutos = hoje.getMinutes();
-
-                    if(minutos < 10){
-                        minutos = "0"+minutos;
+                    if (minutos < 10){
+                        minutos = "0" + minutos;
                     }
 
                     var segundos = hoje.getSeconds();
-
-                    if(segundos < 10){
-                        segundos = "0"+segundos;
+                    if (segundos < 10){
+                        segundos = "0" + segundos;
+                    }
+                     
+                    if(horas == "12"){
+                        relogio.style.color = "yellow";
+                        statusRelogio.innerHTML = "Horário de Almoço";
+                        statusRelogio.style.color = "yellow";
+                        statusRelogio.style.fontSize = "24pt";
                     }
 
-                    relogio.innerHTML = horas+":"+minutos+":"+segundos;
+                    if(horas == "18" || horas > "18" || horas < "07"){
+                        relogio.style.color = "red";
+                        statusRelogio.innerHTML = "Fechado";
+                        statusRelogio.style.color = "red";
+                        statusRelogio.style.fontSize = "24pt";          
+                    }
+
+                    if(horas == "07" || horas > "07" || horas == "13" || horas > "13" && horas != "12" && horas < 18){
+                        relogio.style.color = "#31e84c";
+                        statusRelogio.innerHTML = "Aberto";
+                        statusRelogio.style.color = "#31e84c";
+                        statusRelogio.style.fontSize = "24pt";
+                    }
+
+                    var dia = hoje.getDay();
+                    console.log(dia);
+                    if(dia == 5 || dia == 6 || dia == 7){
+                        relogio.style.color = "red";
+                        statusRelogio.innerHTML = "Fechado";
+                    }
+
+                    relogio.innerHTML = horas + ":" + minutos + ":" + segundos;
                 }
-                window.setInterval("mostrarHorario()", 1000);
+                window.setInterval("manipularRelogio()", 1000);
             </script>
+
         </div>
-        </nav>
+        <div class="div-status">
+            <div class="status">
+                <p>Mudança de Status</p>
+                <div class="menu-status">
+                    <p>Aberto Agora</p>
+                    <p>Horário de Almoço</p>
+                    <p>Fechado Agora</p>
+                </div>
+            </div>
+        </div>
+    </nav>
 </body>
+
 </html>
