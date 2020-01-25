@@ -101,3 +101,43 @@ nav{
 .fechado{
     color: red;
 }
+
+/* ESTILIZAÇÃO DO SLIDE */
+
+section{
+    background-color: #ffa500;
+    height: 500px;
+}
+
+#carrossel{
+    height: 600px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#carrossel li{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+#carrossel li.ativo{
+    opacity: 1;
+    transition: ease 2s;
+    z-index: 1;
+}
+
+.img-slide{
+    width: 1000px;
+    height: 500px;
+}
