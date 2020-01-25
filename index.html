@@ -22,39 +22,39 @@
             <script>
                 var relogio = document.getElementById('clock');
                 var statusRelogio = document.getElementById('textostatus');
-                function manipularRelogio(){
+                function manipularRelogio() {
                     var hoje = new Date();
 
                     var horas = hoje.getHours();
-                    if (horas < 10){
+                    if (horas < 10) {
                         horas = "0" + horas;
                     }
 
                     var minutos = hoje.getMinutes();
-                    if (minutos < 10){
+                    if (minutos < 10) {
                         minutos = "0" + minutos;
                     }
 
                     var segundos = hoje.getSeconds();
-                    if (segundos < 10){
+                    if (segundos < 10) {
                         segundos = "0" + segundos;
                     }
-                     
-                    if(horas == "12"){
+
+                    if (horas == "12") {
                         relogio.style.color = "yellow";
                         statusRelogio.innerHTML = "Horário de Almoço";
                         statusRelogio.style.color = "yellow";
                         statusRelogio.style.fontSize = "24pt";
                     }
 
-                    if(horas == "18" || horas > "18" || horas < "07"){
+                    if (horas == "18" || horas > "18" || horas < "07") {
                         relogio.style.color = "red";
                         statusRelogio.innerHTML = "Fechado";
                         statusRelogio.style.color = "red";
-                        statusRelogio.style.fontSize = "24pt";          
+                        statusRelogio.style.fontSize = "24pt";
                     }
 
-                    if(horas == "07" || horas > "07" || horas == "13" || horas > "13" && horas != "12" && horas < 18){
+                    if (horas == "07" || horas > "07" || horas == "13" || horas > "13" && horas != "12" && horas < 18) {
                         relogio.style.color = "#31e84c";
                         statusRelogio.innerHTML = "Aberto";
                         statusRelogio.style.color = "#31e84c";
@@ -62,10 +62,10 @@
                     }
 
                     var dia = hoje.getDay();
-                    if(dia == 5 || dia == 6 || dia == 7){
+                    if (dia == 5 || dia == 6 || dia == 7) {
                         relogio.style.color = "red";
                         statusRelogio.innerHTML = "Fechado";
-                        statusRelogio.style.color = "red";  
+                        statusRelogio.style.color = "red";
                     }
 
                     relogio.innerHTML = horas + ":" + minutos + ":" + segundos;
@@ -89,20 +89,40 @@
             </div>
         </div>
         <div>
-            <a href="index.html"><img src="http://lh4.ggpht.com/_15FopxVONSo/SbszlB3M6II/AAAAAAAACIU/jZYjX1vwGAo/s144/brazil-flag.png"></a>
-            <a href="indexen.html"><img src=http://lh5.ggpht.com/_15FopxVONSo/Sbs0I7gaReI/AAAAAAAACJk/vpx3tp_jg_k/s144/uk-flag.png"></a>
-        </div>
-    </nav>
+            <a href="index.html"><img
+                    src="http://lh4.ggpht.com/_15FopxVONSo/SbszlB3M6II/AAAAAAAACIU/jZYjX1vwGAo/s144/brazil-flag.png"></a>
+            <a href="indexen.html"><img
+                    src=http://lh5.ggpht.com/_15FopxVONSo/Sbs0I7gaReI/AAAAAAAACJk/vpx3tp_jg_k/s144/uk-flag.png"> </a>
+                    </div> </nav> <section>
+                <ul id="carrossel">
+                    <li class="ativo"><img class="img-slide" src="imagens/1.JPG" alt=""></li>
+                    <li><img class="img-slide" src="imagens/2.jpg" alt=""></li>
+                    <li><img class="img-slide" src="imagens/3.jpg" alt=""></li>
+                    <li><img class="img-slide" src="imagens/1.JPG" alt=""></li>
+                </ul>
+                <script src="js/carrossel.js"></script>
+                </section>
 
-    <section>
-        <ul id="carrossel">
-            <li class="ativo"><img class="img-slide" src="imagens/1.JPG" alt=""></li>
-            <li><img class="img-slide" src="imagens/2.jpg" alt=""></li>
-            <li><img class="img-slide" src="imagens/3.jpg" alt=""></li>
-            <li><img class="img-slide" src="imagens/1.JPG" alt=""></li>
-        </ul>
-        <script src="js/carrossel.js"></script>
-    </section>
+                <section class="section2">
+                    <div class="quemsomos">
+                        <h1 class="h1quemsomos">Quem Somos</h1>
+                        <p class="pquemsomos">
+                            FACCA PROJETISTA MEI,Trabalhamos no planejamento e desenvolvimento dos projetos, Na frente
+                            da produção própria de projetos 2D e 3D, contamos com as melhores tecnologias de softwares
+                            Autocad, Sketchup, Revit. Oferecemos um atendimento personalizado que prioriza o
+                            acompanhamento dos nossos clientes em todas as etapas de execução, E assim conseguimos
+                            sempre oferecer projetos de alto nível, que geram resultados rápidos, melhorias e inovação
+                            nos projetos, Buscamos compartilhar o nossos conhecimentos e oferecemos o que há de melhor
+                            em tecnologia no mercado para alavancar a nossa carreira profissional. Todos ministrados por
+                            proficionais qualificados, com certificado de conclusão. No FaccaProjetista o compromisso
+                            com a entrega de projetos de qualidade e com a satisfação dos clientes vem em primeiro
+                            lugar.
+                        </p>
+                        <img src="imagens/quemsomos.jpg" alt="">
+                    </div>
+                    <div></div>
+                </section>
+
 </body>
 
 </html>
