@@ -198,3 +198,40 @@ button{
     margin-top: 10px;
     width: 100px;
 }
+
+/* ESTILIZAÇÃO DA PARTE DE ENDEREÇO */
+
+.endereco{
+    display: grid;
+    grid-template-areas: 'endereco mapa';
+    grid-template-columns: 50vw 50vw;
+    height: 450px;
+}
+
+.divendereco{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: endereco;
+}
+
+.h1escritorio{
+    font-size: 22pt;
+}
+
+/* ESTILIZAÇÃO DO RODAPÉ */
+
+.rodape{
+    align-items: center;
+    background-color: #a9a9a9;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+}
+
+.rodape p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
