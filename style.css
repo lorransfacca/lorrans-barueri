@@ -148,7 +148,7 @@ section{
 .section2{
     background-color: #a9a9a9;
     display: grid;
-    grid-template-areas: 'ladoesquerdo lado direito';
+    grid-template-areas: 'ladoesquerdo ladodireito';
     grid-template-columns: 50vw 50vw;
     height: 700px;
 }
@@ -157,6 +157,7 @@ section{
     align-items: center;
     display: flex;
     flex-direction: column;
+    grid-area: ladoesquerdo;
     justify-content: center;
 }
 
@@ -169,4 +170,31 @@ section{
 .pquemsomos{
     color: yellow;
     width: 50%;
+}
+
+.form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: ladodireito;
+    justify-content: center;
+}
+
+.h1cad{
+    color: yellow;
+    font-size: 22pt;
+    font-weight: bolder;
+}
+
+label{
+    color: yellow;
+}
+
+button{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 10px;
+    width: 100px;
 }
