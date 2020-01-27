@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>Facca Projetista</title>
 </head>
 
@@ -90,7 +92,7 @@
             </div>
         </div>
             <div>
-                <a href="index.html">
+                <a href="/">
                     <img src="http://lh4.ggpht.com/_15FopxVONSo/SbszlB3M6II/AAAAAAAACIU/jZYjX1vwGAo/s144/brazil-flag.png"></a>
                     <a href="indexen.html"><img src="http://lh5.ggpht.com/_15FopxVONSo/Sbs0I7gaReI/AAAAAAAACJk/vpx3tp_jg_k/s144/uk-flag.png"> </a>
             </div> 
@@ -98,12 +100,12 @@
         
         <section>
                 <ul id="carrossel">
-                    <li class="ativo"><img class="img-slide" src="imagens/1.JPG" alt=""></li>
-                    <li><img class="img-slide" src="imagens/2.jpg" alt=""></li>
-                    <li><img class="img-slide" src="imagens/3.jpg" alt=""></li>
-                    <li><img class="img-slide" src="imagens/1.JPG" alt=""></li>
+                    <li class="ativo"><img class="img-slide" src="../static/imagens/1.JPG" alt=""></li>
+                    <li><img class="img-slide" src="../static/imagens/2.jpg" alt=""></li>
+                    <li><img class="img-slide" src="../static/imagens/3.jpg" alt=""></li>
+                    <li><img class="img-slide" src="../static/imagens/1.JPG" alt=""></li>
                 </ul>
-                <script src="js/carrossel.js"></script>
+                <script src="{% static 'js/carrossel.js' %}"></script>
                 </section>
 
                 <section class="section2">
@@ -121,7 +123,7 @@
                             com a entrega de projetos de qualidade e com a satisfação dos clientes vem em primeiro
                             lugar.
                         </p>
-                        <img src="imagens/quemsomos.jpg" alt="">
+                        <img src="../static/imagens/quemsomos.jpg" alt="">
                     </div>
                     <div class="form">
                         <h1 class="h1cad">Preencha seu cadastro</h1>
